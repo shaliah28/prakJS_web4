@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat</title>
+</head>
+<body>
+    <style> 
+    body{ 
+        background-color: rgb(64, 150, 224);
+    }
+    </style>
+    <script> 
+    function hello() {
+        alert("hello"); 
+    }
+    
+    </script>
+    <div style="width: 100%; stroke: rgb(8, 8, 8);" id="isichat">
+    
+        <h1> Kirim Pesan </h1>
+    </div>
+    <div>
+        </div>
+    </div>
+    <form method="request" onsubmit="return kirim();">
+        <input id="pesan" style="width: 50%" type="text" name="pesan"> 
+        <button type="submit" onclick="return kirim ();"> Kirim Pesan </button>
+    </form>
+ <body>
+    <script type="text/javascript">
+        function kirim() {
+            let pesan = document.getElementById("pesan").value;
+            document.getElementById("isichat").innerHTML += pesan+"<br/>";
+            document.getElementById("pesan").value = "";
+            return false;
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMAGE PICKER</title>
+</head>
+<body style="margin: 300px">
+<head>
+<body>
+</head>
+<style> 
+body { 
+	background-color: rgb(9, 99, 105);
+}
+</style>
+
+
+	<center>
+		<select onchange="gantigambar();" id="listgambar" style="width: 50%" leght="60%"> 
+			<option value="C:\xampp\htdocs\img\foto1.jpg">PILIH KARAKTER</option>
+			<option value="C:\xampp\htdocs\img\foto2.jpg"> Rendang (Sumatra Barat) </option>
+			<option value="C:\xampp\htdocs\img\foto3.jpg"> Sate (Jawa) </option>
+			<option value="C:\xampp\htdocs\img\foto4.jpg"> Gado Gado (Betawi) </option>
+			<option value="C:\xampp\htdocs\img\foto5.jpg"> Pempek (Palembang) </option>
+			<option value="C:\xampp\htdocs\img\mieaceh6.jpg"> Mie Aceh (Aceh</option>
+			<option value="C:\xampp\htdocs\img\foto7.jpg"> Gudeg (Yogyakarta</option>
+		</select>
+	</center>
+		<br/>
+	<img src="C:\xampp\htdocs\img\foto1.jpg" style="width: 100%" id="gambar">
+
+</body>
+<script type="text/javascript">
+	function gantigambar() {
+		let gambar = document.getElementById("listgambar").value;
+		document.getElementById("gambar").src = gambar;
+		alert("Gambar " + gambar);
+	}
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+</head>
+<body style="margin: 200px">
+<head>
+<body>
+	<style> 
+	body{
+		background-image:url(https://cdn.pixabay.com/photo/2016/07/20/00/32/marble-1529415__340.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: auto;
+        top: auto;
+        transform: translate(-50, -50%);
+        padding: 20px,25px;
+        width: 100px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 3); 
+        background-color: rgb(0, 0, 0);
+        text-align: left;
+        color: #221313;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        border-bottom: 4px solid #d7ee84;
+        text-align: left;
+        color: #1c1f22;
+        width: calc(50% - 30px);
+        padding: 10px 10px;
+        margin-bottom: 15px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #f8f7b3;
+        color: rgb(32, 19, 19);
+        font-size: 15px;
+	}
+	</style>
+
+	<center>
+		<form method="REQUEST">
+			Username :<br/>
+			<input type="text" placeholder="username" id="username" name="username"><br/>
+			Password<br/>
+			<input type="password"  placeholder="password" id="password" name="password"><br/>
+			<button type="submit" onclick="return login()">SUBMIT</button>
+		</form>
+	</center>
+
+</body>
+<script type="text/javascript">
+	function login() {
+		username = document.getElementById("username").value;
+		password = document.getElementById("password").value;
+
+		if (username == "" || password == "") {
+			alert("Username / Password Tidak Boleh Kosong");
+			return false;
+		}
+		else if (password.length < 6) {
+			alert("Password Kurang dari 6");
+			return false;
+		}
+		else if (username == "shaliah" && password == "123456789") {
+			window.location = "chat.html";
+			return false;
+		}else{
+			alert("Username / Password anda salah");
+		}
+	}
+</script>
+</html>
